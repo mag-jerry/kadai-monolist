@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    protected $fillable = ['code','name','url','imag_url'];
+    protected $fillable = ['code','name','url','image_url'];
     
     public function users() {
         return $this->belongsToMany(User::class)->withpivot('type')->withTimestamps();
